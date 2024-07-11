@@ -23,9 +23,6 @@ dependencies:
   '@types/react-dom':
     specifier: ^18.3.0
     version: 18.3.0
-  aos:
-    specifier: 3.0.0-beta.6
-    version: 3.0.0-beta.6
   astro:
     specifier: ^4.11.5
     version: 4.11.5(typescript@5.5.3)
@@ -1442,14 +1439,6 @@ packages:
       picomatch: 2.3.1
     dev: false
 
-  /aos@3.0.0-beta.6:
-    resolution: {integrity: sha512-VLWrpq8bfAWcetynVHMMrqdC+89Qq/Ym6UBJbHB4crIwp3RR8uq1dNGgsFzoDl03S43rlVMK+na3r5+oUCZsYw==}
-    dependencies:
-      classlist-polyfill: 1.2.0
-      lodash.debounce: 4.0.8
-      lodash.throttle: 4.1.1
-    dev: false
-
   /aproba@2.0.0:
     resolution: {integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==}
     dev: false
@@ -1729,10 +1718,6 @@ packages:
   /ci-info@4.0.0:
     resolution: {integrity: sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg==}
     engines: {node: '>=8'}
-    dev: false
-
-  /classlist-polyfill@1.2.0:
-    resolution: {integrity: sha512-GzIjNdcEtH4ieA2S8NmrSxv7DfEV5fmixQeyTmqmRmRJPGpRBaSnA2a0VrCjyT8iW8JjEdMbKzDotAJf+ajgaQ==}
     dev: false
 
   /cli-boxes@3.0.0:
@@ -2609,14 +2594,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-locate: 5.0.0
-    dev: false
-
-  /lodash.debounce@4.0.8:
-    resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
-    dev: false
-
-  /lodash.throttle@4.1.1:
-    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
     dev: false
 
   /log-symbols@6.0.0:
