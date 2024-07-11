@@ -1,0 +1,23 @@
+---
+import Floating from "../components/ButtonWhats/Floating.astro";
+import Footer from "../components/Footer.astro";
+import NavBar from "../components/NavBar.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Make Yourself See</title>
+  </head>
+  <body>
+    <NavBar />
+    <slot />
+    <Floating />
+    <Footer />
+  </body>
+</html>
