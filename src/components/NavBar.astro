@@ -24,22 +24,22 @@ Image;
   >
     <a
       href="#aboutUs"
-      class="text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
+      class="nav-link text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
       >Nosotros</a
     >
     <a
-      href="#"
-      class="text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
+      href="#services"
+      class="nav-link text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
       >Servicios</a
     >
     <a
-      href="#"
-      class="text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
+      href="#courses"
+      class="nav-link text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
       >Cursos</a
     >
     <a
-      href="#"
-      class="text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
+      href="#contact"
+      class="nav-link text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
       >Contacto</a
     >
   </div>
@@ -237,4 +237,23 @@ Image;
       drawer.classList.add("-translate-x-full");
     });
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const targetId = link.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  });
 </script>
