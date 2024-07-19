@@ -1,6 +1,6 @@
 <section
   id="aboutUs"
-  class="text-black overflow-hidden py-28 bg-cover bg-center bg-[#FAB927]"
+  class=" text-black overflow-hidden py-28 bg-cover bg-center bg-[#FAB927]"
 >
   <h2
     class="text-4xl font-bold text-center title-font text-black tracking-widest bg-opacity-70"
@@ -32,11 +32,11 @@
         </p>
       </div>
       <div class="lg:w-1/2 w-full flex flex-col items-end">
-        <div class="flex items-center gap-8">
+        <div class="flex items-center lg:gap-8">
           <a href="www.linkedin.com" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center mb-6">
+            <div class="flex items-center lg:gap-2 mb-6">
               <img
-                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:scale-110 duration-300"
+                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:animate-bounce"
                 src="/youtube.svg"
                 width="200"
                 height="200"
@@ -48,10 +48,10 @@
             </div>
           </a>
           <a href="www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center mt-16">
+            <div class="flex items-center lg:gap-2 mt-16">
               <p class="text-2xl text-[#A61AD7]">Instagram</p>
               <img
-                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:scale-110 duration-300"
+                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:animate-bounce"
                 src="/instagram.svg"
                 width="200"
                 height="200"
@@ -62,11 +62,11 @@
             </div>
           </a>
         </div>
-        <div class="flex items-center gap-8">
+        <div class="flex items-center lg:gap-8">
           <a href="www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center mb-6">
+            <div class="flex items-center lg:gap-4 mb-6">
               <img
-                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:scale-110 duration-300"
+                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:animate-bounce"
                 src="/facebook.svg"
                 width="200"
                 height="200"
@@ -74,14 +74,14 @@
                 decoding="async"
                 alt="instagram-logo"
               />
-              <p class="text-2xl text-[#A61AD7]">Facebook</p>
+              <p class="text-2xl text-[#A61AD7] mr-6">Facebook</p>
             </div>
           </a>
           <a href="www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center mt-16">
+            <div class="flex items-center lg:gap-2 mt-16">
               <p class="text-2xl text-[#A61AD7]">TikTok</p>
               <img
-                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:scale-110 duration-300"
+                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:animate-bounce"
                 src="/tiktok.svg"
                 width="200"
                 height="200"
@@ -92,11 +92,11 @@
             </div>
           </a>
         </div>
-        <div class="flex items-center gap-8">
+        <div class="flex items-center lg:gap-8">
           <a href="www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center mb-6">
+            <div class="flex items-center lg:gap-4 mb-6">
               <img
-                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:scale-110 duration-300"
+                class="w-24 h-24 lg:w-22 lg:h-22 object-cover object-center rounded-3xl hover:animate-bounce"
                 src="/whatsapp.svg"
                 width="200"
                 height="200"
@@ -108,10 +108,10 @@
             </div>
           </a>
           <a href="www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center mt-16">
-              <p class="text-2xl text-[#A61AD7]">Linkedin</p>
+            <div class="flex items-center mt-16 lg:gap-4">
+              <p class="text-2xl text-[#A61AD7] h">Linkedin</p>
               <img
-                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:scale-110 duration-300"
+                class="w-24 h-24 lg:w-24 lg:h-24 object-cover object-center rounded-3xl hover:animate-bounce"
                 src="/linkedinLogo.svg"
                 width="200"
                 height="200"
@@ -123,10 +123,10 @@
           </a>
         </div>
       </div>
-      <div
-        class="absolute inset-0 lg:w-1/2 bg-cover bg-center opacity-60 z-0 background-custom"
-      >
+      <div class="absolute inset-0 lg:w-1/2 bg-cover bg-center opacity-60 z-0 background-custom"></div>
+    </div>
       </div>
+    
     </div>
   </div>
 </section>
@@ -140,7 +140,7 @@
   @media (max-width: 768px) {
     .background-custom {
       background-size: 160%;
-      background-position: 50% 0%;
+      background-position: 50% -10%;
     }
   }
 </style>
