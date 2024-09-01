@@ -1,54 +1,22 @@
-# Astro Starter Kit: Basics
+# MakeYourselfSee - Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Bienvenido a MakeYourselfSee! Esta es la landing page oficial de nuestra empresa de marketing digital, diseñada para ayudar a las empresas a escalar sus resultados implementando las estrategias más efectivas de Growth Marketing.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Descripción
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Este proyecto es una landing page diseñada para presentar los servicios de marketing digital que ofrecemos. La página está optimizada para una experiencia de usuario fluida y atractiva, con un enfoque en la conversión y la captación de clientes potenciales.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Tecnologías Utilizadas
 
-## 🚀 Project Structure
+- **Astro**: Utilizado como framework principal para la construcción de la página. Astro permite generar sitios estáticos altamente optimizados y rápidos.
+- **Tailwind CSS**: Usado para la estilización de la página. Tailwind ofrece un enfoque utilitario para el diseño, permitiendo una rápida creación de estilos responsivos y personalizados.
+- **Fontsource**: Implementado para gestionar la tipografía de la página. Esto garantiza que las fuentes utilizadas estén bien optimizadas y sean accesibles.
+- **Vercel**: La página está desplegada en Vercel, lo que asegura un hosting rápido, escalable y fácil de manejar.
+- **Donweb**: El dominio `makeyourselfsee.com` está registrado y gestionado a través de Donweb.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Características
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Diseño Responsive**: La página está completamente optimizada para dispositivos móviles, tabletas y escritorios.
+- **Optimización para SEO**: El contenido y la estructura de la página están optimizados para mejorar el posicionamiento en motores de búsqueda.
+- **Animaciones Suaves**: Uso de animaciones CSS para mejorar la experiencia visual sin comprometer el rendimiento.
+- **Carga Rápida**: Gracias a Astro y al deployment en Vercel, la página carga rápidamente, ofreciendo una experiencia de usuario fluida.

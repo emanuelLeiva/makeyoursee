@@ -2,14 +2,17 @@
 import Floating from "../components/ButtonWhats/Floating.astro";
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
-import '@fontsource/bebas-neue';
+import "@fontsource/bebas-neue";
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="MakeYourselfSee - Impulsa tu negocio con estrategias efectivas de marketing digital. Descubre cómo escalar tus resultados y atraer más clientes con nuestras soluciones de Growth Marketing."
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favi.png" />
     <meta name="generator" content={Astro.generator} />
@@ -25,29 +28,35 @@ import '@fontsource/bebas-neue';
 
 <style is:global>
   html {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
   }
 
-@keyframes show {
-  from {
-    opacity: 0;
-    scale: 25%;
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
   }
+  img,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  ul {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
 
-  to {
-    opacity: 1;
-    scale: 100%;
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
   }
-}
-img, p, h1, h2, h3, h4, h5, ul {
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-
-  animation-timeline: --image;
-  animation-name: show;
-
-  animation-range: entry 25% cover 30%;
-  animation-fill-mode: both;
-}
-
 </style>
