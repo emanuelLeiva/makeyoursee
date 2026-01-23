@@ -1,59 +1,47 @@
 ---
 import { Image } from "astro:assets";
-
-Image;
 ---
 
-<nav class="w-full bg-black p-4 md:p-10 flex items-center justify-between">
-  <div class="flex items-center">
-    <Image
-      src="/logoNew.webp"
-      alt="Logo Make Yourself See"
-      width="200"
-      height="200"
-      class="md:w-14 md:h-14 w-10 h-10 rounded-full"
-    />
-    <h1 class="text-xl md:text-3xl font-bold text-[#febc26] ml-2 uppercase">
-      <span class="text-[#FAB927]"> MAKE </span>
-      <span class="text-white"> YOUR SELF </span>
-      <span class="text-[#A61AD7]"> SEE </span>
-    </h1>
-  </div>
-  <div
-    class="hidden md:flex space-x-4 items-center md:ml-10 md:space-x-10 md:pr-4 uppercase text-lg"
-  >
-    <a
-      href="#aboutUs"
-      class="nav-link text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
-      >Nosotros</a
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 z-50 w-full bg-black/90 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <!-- LOGO -->
+    <a href="/" class="flex items-center gap-3">
+      <Image
+        src="/logoNew.webp"
+        alt="Logo Make Yourself See"
+        width="200"
+        height="200"
+        loading="eager"
+        decoding="async"
+        class="w-10 h-10 rounded-full"
+      />
+      <h1 class="text-xl md:text-2xl font-bold uppercase tracking-wide">
+        <span class="text-[#FAB927]">MAKE</span>
+        <span class="text-white mx-1">YOURSELF</span>
+        <span class="text-[#A61AD7]">SEE</span>
+      </h1>
+    </a>
+
+    <!-- LINKS DESKTOP -->
+    <div
+      class="hidden md:flex text-xl items-center gap-8 uppercase font-semibold"
     >
-    <a
-      href="#services"
-      class="nav-link text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
-      >Servicios</a
-    >
-    <a
-      href="#courses"
-      class="nav-link text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
-      >Cursos</a
-    >
-    <a
-      href="#contact"
-      class="nav-link text-[#febc26] hover:text-[#febc26] hover:bg-[#A61AD7] py-2 px-3 rounded font-semibold"
-      >Contacto</a
-    >
-  </div>
-  <div class="flex items-center md:hidden">
+      <a href="#aboutUs" class="nav-link">Nosotros</a>
+      <a href="#services" class="nav-link">Servicios</a>
+      <a href="#courses" class="nav-link">Cursos</a>
+      <a href="#contact" class="nav-link">Contacto</a>
+    </div>
+
+    <!-- HAMBURGER -->
     <button
-      type="button"
       id="menu-button"
-      aria-controls="drawer-navigation"
-      data-drawer-target="drawer-navigation"
-      data-drawer-show="drawer-navigation"
-      class="text-[#febc26] hover:text-[#671585] focus:outline-none focus:text-[#671585]"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      class="md:hidden text-[#FAB927] focus:outline-none"
     >
       <svg
-        class="h-6 w-6"
+        class="w-7 h-7"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -61,178 +49,96 @@ Image;
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width={2}
+          stroke-width="2"
           d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
   </div>
 </nav>
 
+<!-- OVERLAY -->
 <div
-  id="drawer-navigation"
-  class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-[#A71BDB] w-64"
-  tabindex="-1"
-  aria-labelledby="drawer-navigation-label"
+  id="overlay"
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity z-40"
 >
-  <h5
-    id="drawer-navigation-label"
-    class="text-base font-semibold text-[#febc26] uppercase"
-  >
-    Make yourself see
-  </h5>
-
-  <button
-    type="button"
-    data-drawer-hide="drawer-navigation"
-    aria-controls="drawer-navigation"
-    class="text-gray-400 bg-transparent hover:bg-[#671585] hover:text-[#febc26] rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center"
-  >
-    <svg
-      class="w-3 h-3"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 14 14"
-    >
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
-    </svg>
-    <span class="sr-only">Close menu</span>
-  </button>
-  <div class="py-4 overflow-y-auto">
-    <ul class="space-y-2 font-medium">
-      <li>
-        <a
-          href="#aboutUs"
-          class="flex items-center p-2 text-white rounded-lg hover:bg-[#671585] group"
-        >
-          <svg
-            class="w-5 h-5 text-white transition duration-75 group-hover:text-[#febc26]"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 22 21"
-          >
-            <path
-              d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"
-            ></path>
-            <path
-              d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
-            ></path>
-          </svg>
-          <span class="ms-3 text-white ">Nosotros</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#services"
-          class="flex items-center p-2 text-white rounded-lg hover:bg-[#671585] group"
-        >
-          <svg
-            class="w-5 h-5 text-white transition duration-75 group-hover:text-[#febc26]"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 18 20"
-          >
-            <path
-              d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"
-            ></path>
-          </svg>
-          <span class="flex-1 ms-3 whitespace-nowrap">Servicios</span>
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="#courses"
-          class="flex items-center p-2 text-white rounded-lg hover:bg-[#671585] group"
-        >
-          <svg
-            class="w-5 h-5 text-white transition duration-75 group-hover:text-[#febc26]"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z"
-            ></path>
-            <path
-              d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z"
-            ></path>
-            <path
-              d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z"
-            ></path>
-          </svg>
-          <span class="flex-1 ms-3 whitespace-nowrap">Cursos</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#contact"
-          class="flex items-center p-2 text-white rounded-lg hover:bg-[#671585] group"
-        >
-          <svg
-            class="w-5 h-5 text-white transition duration-75 group-hover:text-[#febc26]"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z"
-            ></path>
-            <path
-              d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z"
-            ></path>
-            <path
-              d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z"
-            ></path>
-          </svg>
-          <span class="flex-1 ms-3 whitespace-nowrap">Contacto</span>
-        </a>
-      </li>
-    </ul>
-  </div>
 </div>
-<script>
-  const button = document.querySelector("#menu-button");
-  const drawer = document.querySelector("#drawer-navigation");
 
-  if (button && drawer) {
-    button.addEventListener("click", () => {
-      drawer.classList.toggle("-translate-x-full");
-    });
+<!-- DRAWER -->
+<aside
+  id="drawer"
+  class="fixed top-0 left-0 z-50 h-full w-72 bg-[#A71BDB] -translate-x-full transition-transform duration-300 ease-out"
+>
+  <div class="flex items-center justify-between px-6 py-5">
+    <span class="text-[#FAB927] uppercase font-semibold">Make Yourself See</span
+    >
+    <button id="close-button" aria-label="Cerrar menú">
+      <svg
+        class="w-5 h-5 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
 
-    const closeButton = drawer.querySelector(
-      "[data-drawer-hide='drawer-navigation']"
-    );
-    closeButton.addEventListener("click", () => {
-      drawer.classList.add("-translate-x-full");
-    });
+  <nav class="px-4 space-y-2">
+    <a href="#aboutUs" class="drawer-link">Nosotros</a>
+    <a href="#services" class="drawer-link">Servicios</a>
+    <a href="#courses" class="drawer-link">Cursos</a>
+    <a href="#contact" class="drawer-link">Contacto</a>
+  </nav>
+</aside>
+
+<!-- STYLES -->
+<style>
+  .nav-link {
+    @apply text-[#FAB927] px-3 py-2 rounded-md transition-all duration-200;
+  }
+  .nav-link:hover {
+    @apply bg-[#A61AD7] text-[#FAB927];
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".nav-link");
+  .drawer-link {
+    @apply block text-white uppercase font-medium px-4 py-3 rounded-lg transition;
+  }
+  .drawer-link:hover {
+    @apply bg-[#671585] text-[#FAB927];
+  }
+</style>
 
-    navLinks.forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        const targetId = link.getAttribute("href");
-        const targetElement = document.querySelector(targetId) as HTMLElement;
+<!-- SCRIPT -->
+<script>
+  const button = document.getElementById("menu-button");
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("close-button");
+  const links = drawer.querySelectorAll("a");
 
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: "smooth",
-          });
-        }
-      });
-    });
+  const openMenu = () => {
+    drawer.classList.remove("-translate-x-full");
+    overlay.classList.remove("opacity-0", "pointer-events-none");
+    document.body.classList.add("overflow-hidden");
+    button.setAttribute("aria-expanded", "true");
+  };
+
+  const closeMenu = () => {
+    drawer.classList.add("-translate-x-full");
+    overlay.classList.add("opacity-0", "pointer-events-none");
+    document.body.classList.remove("overflow-hidden");
+    button.setAttribute("aria-expanded", "false");
+  };
+
+  button.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  links.forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 </script>
